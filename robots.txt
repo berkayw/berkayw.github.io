@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://berkayw.com/sitemap.xml
