@@ -8,14 +8,14 @@
     <link id="shortcuticon" rel="shortcut icon" href="../images/bk.svg">
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="An in-depth multiplayer systems built using Mirror, Steamworks, and NGO.">
-    <meta name="keywords" content="Unity Multiplayer, Mirror Networking, NGO, Netcode, Steamworks, Facepunch, Game Developer, Berkay Kus, berkayw">
+    <meta name="description" content="An in-depth multiplayer systems built using Mirror, and Steamworks.">
+    <meta name="keywords" content="Unity Multiplayer, Mirror Networking, Steamworks, Facepunch, Game Developer, Berkay Kus, berkayw">
     <meta name="author" content="Berkay Kus">
     <meta name="robots" content="index, follow">
 
     <!-- Open Graph (for social media sharing) -->
     <meta property="og:title" content="Unity Multiplayer · Berkay Kus">
-    <meta property="og:description" content="An in-depth multiplayer systems built using Mirror, Steamworks, and NGO.">
+    <meta property="og:description" content="An in-depth multiplayer game template built using Mirror and Steamworks.">
     <meta property="og:image" content="https://berkayw.com/images/bk.svg">
     <meta property="og:url" content="https://berkayw.com/unity-multiplayer.html">
     <meta property="og:type" content="website">
@@ -83,7 +83,7 @@
         </optHide>
     </menu>
     <div class="top right" style="z-index: 20; padding: 30px;">
-        <a class="hyperimage" href="javascript:void(0);" onclick="window.history.back();"><img id="back" src="../images/back.svg" alt="back" width="40" height="40"></a>
+        <a class="hyperimage" href="/" ><img id="back" src="../images/back.svg" alt="back" width="40" height="40"></a>
     </div>
 </div>
 <div class="content">
@@ -100,15 +100,13 @@
                     <info>
                         <p>
                             <a class="hyperimage" href="" target="_blank" style="display: none;"><img id="websiteProj" src="../images/globe_box_optimised.svg" alt="website" width="20" height="20"></a>
-                            <a class="hyperimage" href="" target="_blank" style="display: none;"><img id="githubProj" src="../images/github_box_optimised.svg" alt="GitHub" width="20" height="20"></a>
+                            <a class="hyperimage" href="https://github.com/berkayw/UnityMultiplayer-MirrorAndSteamworks-Template" target="_blank"><img id="githubProj" src="../images/github_box_optimised.svg" alt="GitHub" width="20" height="20"></a>
                             <a class="hyperimage" href="" target="_blank" style="display: none;"><img id="steamProj" src="../images/steam_box.svg" alt="Steam" width="20" height="20"></a>
                             <a class="hyperimage" href="" target="_blank" style="display: none;"><img id="switchProj" src="../images/switch_box.svg" alt="Nintendo Switch" width="20" height="20"></a>
                             <a class="hyperimage" href="" target="_blank" style="display: none;"><img id="itchdotioProj" src="../images/itchdotio_box_optimised.svg" alt="itch.io" width="20" height="20"></a>                    
                             <a class="hyperimage" href="" target="_blank" style="display: none;"><img id="youtubeProj" src="../images/youtube_box_optimised.svg" alt="YouTube" width="20" height="20"></a>
                             <a class="hyperimage" href="" target="_blank" style="display: none;"><img id="linkedinProj" src="../images/linkedin_box_optimised.svg" alt="LinkedIn" width="20" height="20"></a>
                             <a class="hyperimage" href="" target="_blank" style="display: none;"><img id="documentProj" src="../images/document_box.svg" alt="document" width="20" height="20"></a>
-
-
                         </p>
                     </info>
                 </item>
@@ -130,7 +128,7 @@
                     </h3>
                     <info>
                         <p>
-                            Multiplayer Game Demos
+                            Multiplayer Steam Game
                         </p>
                     </info>
                 </item>
@@ -146,9 +144,7 @@
                             <br>
                             Mirror
                             <br>
-                            Steamworks.Net (FizzyFacePunch)
-                            <br>
-                            Netcode For GameObjects
+                            Steamworks.Net (FizzyFacePunch)                       
                         </p>
                     </info>
                 </item>
@@ -156,13 +152,14 @@
         </div>
         <div class="document">
             <h3>
-                🏡 WIP (Work In Progress)
+                🏡 Personal Project
             </h3>
             <h3>
                 About
             </h3>
             <p>
-                WIP (Work In Progress)
+                A fully integrated multiplayer Steam game template using Unity Mirror and Steamworks (FizzyFacePunch).
+                Easily create or join lobbies, invite Steam friends, and enjoy secure, peer-to-peer gameplay via Steam Relay for low-latency, NAT-punching-free connections.
             </p>
             <h3>
                 Trailer
@@ -173,12 +170,104 @@
                     </iframe>
                 </div>
             </div>
-            <h3>
+            <h3 style="margin-bottom: -30px;"> 
                 Description
             </h3>
-            <p>
-                WIP (Work In Progress)
-            </p>
+            <details>
+                <summary> 
+                    Source Code Explanation                         
+                </summary> 
+                <p style="line-height: 1.6;">
+                    <span class="script-name">SteamManager</span> initializes Steamworks, enabling all subsequent API calls.<br/>
+                    <span class="script-name">SteamLobbyManager</span> creates/joins lobbies, synchronize members and manages Mirror Networking.<br/>
+                    <span class="script-name">SteamFriendsManager</span> populates the player’s Steam friends list in the UI.<br/>
+                    <span class="script-name">FriendObject</span> handles lobby invitations through Steam.<br/>
+                    <span class="script-name">CustomNetworkManager</span> ensures scene transitions and player spawning.<br/>
+                    <span class="script-name">LocalComponentChecker</span> disables non-local player components.<br/>
+                    <span class="script-name">PlayerNameTag</span> displays and synchronizes Steam usernames as floating name tags above players.<br/>
+                  </p> 
+        
+            <details>
+                <summary>SteamManager.cs</summary>
+                    <div>
+                        <p>                        
+                            The foundational script for initializing and shutting down Steamworks. On Awake(), it calls SteamClient.Init with a predefined AppID, starting the Steam connection.  
+                            The OnApplicationQuit method ensures a clean shutdown with SteamClient.Shutdown(), preventing memory leaks.                     
+                        </p> 
+                        <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fberkayw%2FUnityMultiplayer-MirrorAndSteamworks-Template%2Fblob%2Fmain%2FAssets%2FScripts%2FLobbySteam%2FSteamManager.cs&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on&maxHeight=500"></script>
+                    </div>
+            </details>
+
+            <details>
+                <summary>SteamLobbyManager.cs</summary>
+                    <div>
+                        <p>                        
+                            Manages the entire lobby lifecycle, including creation, joining, and member synchronization. The CreateLobbyAsync method initializes a Steam lobby and starts a Mirror host session. 
+                            Callbacks like OnLobbyEntered and OnLobbyMemberJoined update the UI dynamically via UnityEvent (e.g., OnJoinedLobby.Invoke()).                   
+                        </p> 
+                        <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fberkayw%2FUnityMultiplayer-MirrorAndSteamworks-Template%2Fblob%2Fmain%2FAssets%2FScripts%2FLobbySteam%2FSteamLobbyManager.cs&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on&maxHeight=500"></script>                    
+                    </div>
+            </details>
+        
+            <details>
+                <summary>SteamFriendsManager.cs</summary>
+                    <div>
+                        <p>                        
+                            This script dynamically fetches and displays the player’s Steam friends list, including profile names and avatars. 
+                            The InitFriends method iterates through the user’s friends using SteamFriends.GetFriends(), instantiates UI entries for each friend, and links them to their SteamID.                  
+                        </p> 
+                        <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fberkayw%2FUnityMultiplayer-MirrorAndSteamworks-Template%2Fblob%2Fmain%2FAssets%2FScripts%2FLobbySteam%2FSteamFriendsManager.cs&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on&maxHeight=500"></script>                    
+                    </div>
+            </details>
+
+            <details>
+                <summary>FriendObject.cs</summary>
+                    <div>
+                        <p>                        
+                            Attached to each friend entry in the UI, this script handles lobby invitations. 
+                            When a player clicks "Invite," it checks if the user is in a lobby and either sends an invite via SteamLobbyManager.currentLobby.InviteFriend() 
+                            or creates a new lobby first.                   
+                        </p> 
+                        <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fberkayw%2FUnityMultiplayer-MirrorAndSteamworks-Template%2Fblob%2Fmain%2FAssets%2FScripts%2FLobbySteam%2FFriendObject.cs&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on&maxHeight=500"></script>                    
+                    </div>
+            </details>
+
+            <details>
+                <summary>CustomNetworkManager.cs</summary>
+                    <div>
+                        <p>                        
+                            Extends Mirror’s NetworkManager. The ChangeScene method allows the host to trigger a scene transition for all players.
+                            Overrides OnServerSceneChanged to spawn players in the game scene. 
+                        </p> 
+                        <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fberkayw%2FUnityMultiplayer-MirrorAndSteamworks-Template%2Fblob%2Fmain%2FAssets%2FScripts%2FNetwork%2FCustomNetworkManager.cs&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on&maxHeight=500"></script>
+                    </div>
+            </details>
+
+            <details>
+                <summary>LocalComponentChecker.cs</summary>
+                    <div>
+                        <p>                        
+                            This script disables non-essential components (e.g., cameras, movement scripts) on non-local players. 
+                            During Update(), it checks isLocalPlayer and destroys components like Mover or AdvancedWalkerController for non-local players, preventing redundant processing.                   
+                        </p> 
+                        <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fberkayw%2FUnityMultiplayer-MirrorAndSteamworks-Template%2Fblob%2Fmain%2FAssets%2FScripts%2FGame%2FPlayer%2FLocalComponentChecker.cs&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on&maxHeight=500"></script>                    
+                    </div>
+            </details>
+
+            <details>
+                <summary>PlayerNameTag.cs</summary>
+                    <div>
+                        <p>                        
+                            This script handles displaying and synchronizing Steam usernames as floating name tags above players’ in the game. 
+                            The CmdSetPlayerName command sends the local player’s Steam name to the server, which broadcasts it to all clients via OnNameChanged hook.<br/>
+                            Also, the LateUpdate method ensures the name tag always faces the camera. 
+                 
+                        </p> 
+
+                        <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fberkayw%2FUnityMultiplayer-MirrorAndSteamworks-Template%2Fblob%2Fmain%2FAssets%2FScripts%2FGame%2FPlayer%2FPlayerNameTag.cs&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on&maxHeight=500"></script>                    
+                    </div>
+            </details>
+        
         </div>
     </project>
     <ul class="portfolio-pieces">

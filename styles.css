@@ -1098,9 +1098,17 @@ overlay {
 
   .pdf-button:hover {
     background: #293be4;
+}
+
+.script-name {
+    font-family: 'Consolas', monospace; 
+    color: #d0d0d0; 
+    font-weight: bold;              
+    background-color: #313131;        
+    padding: 1px 4px;              
+    border-radius: 3px;               
   }
-
-
+  
 /* Dark Mode */
 @media (prefers-color-scheme: light){
     body {
