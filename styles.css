@@ -1116,7 +1116,6 @@ overlay {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     border-radius: 16px;
     overflow: hidden;
-    zoom: 80%;
   }
   
   .thesis-container iframe {
@@ -1127,7 +1126,6 @@ overlay {
     height: 100%;
     border: none;
     border-radius: 16px;
-    zoom: 80%;
   }
 /* Dark Mode */
 @media (prefers-color-scheme: light){
