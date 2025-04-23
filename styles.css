@@ -1108,7 +1108,26 @@ overlay {
     padding: 1px 4px;              
     border-radius: 3px;               
   }
+  .thesis-container {
+    position: relative;
+    width: 100%;
+    margin-top: 20px; 
+    padding-top: 56.25%; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    overflow: hidden;
+  }
   
+  .thesis-container iframe {
+    zoom: 80%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 16px;
+  }
 /* Dark Mode */
 @media (prefers-color-scheme: light){
     body {

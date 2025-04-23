@@ -9,6 +9,8 @@ let portfolioItems = [];
 
 portfolioItems.push(
     new PortfolioItem(null, 'graduation_hat.glb'),
+    new PortfolioItem("home", 'miniature_wooden_house.glb'),
+
 );
 
 let promises = [];

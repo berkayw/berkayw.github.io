@@ -329,15 +329,24 @@ export class ModelPreviewer{
             }
             else if(item.object.name === "pixel_tree_1") 
             {                
-                    finalScale *= .5; //Scale
-                    item.object.position.set(0,0,0);
+                finalScale *= .5; //Scale
+                item.object.position.set(0,0,0);
             }
             else if(item.object.name === "graduation_hat") 
-                {                
-                    finalScale *= 1.2; //Scale
-                    item.object.position.set(0,-1,0);
-                    item.object.rotation.set(-0.2,0,0);
-                }
+            {                
+                finalScale *= 1.2; //Scale
+                item.object.position.set(0,-1,0);
+                item.object.rotation.set(-0.2,0,0);
+            }
+            else if(item.object.name === "ps3_gamepad") 
+            {                
+                finalScale *= 0.15; //Scale                  
+            }
+            else if(item.object.name === "miniature_wooden_house") 
+            {                
+                finalScale *= 20; //Scale  
+                item.object.position.set(0,-1.4,0);          
+            }
             else
             {
                 finalScale *= 1;

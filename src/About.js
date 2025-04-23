@@ -10,7 +10,9 @@ let preview = document.querySelector('.model-preview');
 let portfolioItems = [];
 
 portfolioItems.push(
-    new PortfolioItem(null, 'teapot.glb'),
+    new PortfolioItem(null, 'ps3_gamepad.glb'),
+    new PortfolioItem("home", 'miniature_wooden_house.glb'),
+
 );
 
 let promises = [];
