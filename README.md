@@ -10,6 +10,10 @@
 [Paper Airplane](https://skfb.ly/6UWSv) by kilansky is licensed under [Creative Commons Attribution](http://creativecommons.org/licenses/by/4.0/)<br>
 [Pixel Tree](https://skfb.ly/oPAzQ) by Palmart Productions is licensed under [Creative Commons Attribution](http://creativecommons.org/licenses/by/4.0/)<br>
 [Graduation Hat](https://skfb.ly/oEMQP) by Delo is licensed under [Creative Commons Attribution](http://creativecommons.org/licenses/by/4.0/)<br>
+[Ps3 Gamepad](https://skfb.ly/UGoP) by KeybladeHolder is licensed under [Creative Commons Attribution](http://creativecommons.org/licenses/by/4.0/)<br>
+[Miniature Wooden House](https://skfb.ly/otKUG) by KeybladeHolder is licensed under [Creative Commons Attribution](http://creativecommons.org/licenses/by/4.0/)<br>
+
+
 ### Shader
 [WebGL Outlines](https://github.com/OmarShehata/webgl-outlines) by Omar Shehata is licensed under [MIT](https://opensource.org/license/mit/)<br>
 
