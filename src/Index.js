@@ -14,7 +14,7 @@ videoItems.push(
     new VideoItem('shadowOfSea', 'shadowOfSeaVid'),
     new VideoItem('crystalWars', 'crystalWarsVid'),
     new VideoItem('unityMultiplayer', 'unityMultiplayerVid'),
-    
+    new VideoItem('featherFighters', 'featherFightersVid'),
     
 
 );

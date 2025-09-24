@@ -347,6 +347,11 @@ export class ModelPreviewer{
                 finalScale *= 20; //Scale  
                 item.object.position.set(0,-1.4,0);          
             }
+            else if(item.object.name === "chicken") 
+            {                
+                finalScale *= 7.5; //Scale    
+                item.object.position.set(0,-1.7,0);  
+            }
             else
             {
                 finalScale *= 1;
